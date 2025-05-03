@@ -1,4 +1,435 @@
 const questions = [
+        {
+        "question": "A company makes forecasts each quarter to decide how to optimize operations to meet expected demand. The company uses ML models to make these forecasts. An AI practitioner is writing a report about the trained ML models to provide transparency and explainability to company stakeholders. What should the AI practitioner include in the report to meet the transparency and explainability requirements?",
+        "options": [
+            "Code for model training",
+            "Partial dependence plots (PDPs)",
+            "Sample data for training",
+            "Model convergence tables"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "A law firm wants to build an AI application by using large language models (LLMs). The application will read legal documents and extract key points from the documents. Which solution meets these requirements?",
+        "options": [
+            "Build an automatic named entity recognition system",
+            "Create a recommendation engine",
+            "Develop a summarization chatbot",
+            "Develop a multi-language translation system"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "A company wants to classify human genes into 20 categories based on gene characteristics. The company needs an ML algorithm to document how the inner mechanism of the model affects the output. Which ML algorithm meets these requirements?",
+        "options": [
+            "Decision trees",
+            "Linear regression",
+            "Logistic regression",
+            "Neural networks"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "A company has built an image classification model to predict plant diseases from photos of plant leaves. The company wants to evaluate how many images the model classified correctly. Which evaluation metric should the company use to measure the model's performance?",
+        "options": [
+            "R-squared score",
+            "Accuracy",
+            "Root mean squared error (RMSE)",
+            "Learning rate"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "A company is using a pre-trained large language model (LLM) to build a chatbot for product recommendations. The company needs the LLM outputs to be short and written in a specific language. Which solution will align the LLM response quality with the company's expectations?",
+        "options": [
+            "Adjust the prompt",
+            "Choose an LLM of a different size",
+            "Increase the temperature",
+            "Increase the Top K value"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "A company uses Amazon SageMaker for its ML pipeline in a production environment. The company has large input data sizes up to 1 GB and processing times up to 1 hour. The company needs near real-time latency. Which SageMaker inference option meets these requirements?",
+        "options": [
+            "Real-time inference",
+            "Serverless inference",
+            "Asynchronous inference",
+            "Batch transform"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "A company is using domain-specific models. The company wants to avoid creating new models from the beginning. The company instead wants to adapt pre-trained models to create models for new, related tasks. Which ML strategy meets these requirements?",
+        "options": [
+            "Increase the number of epochs",
+            "Use transfer learning",
+            "Decrease the number of epochs",
+            "Use unsupervised learning"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "A company is building a solution to generate images for protective eyewear. The solution must have high accuracy and must minimize the risk of incorrect annotations. Which solution will meet these requirements?",
+        "options": [
+            "Human-in-the-loop validation by using Amazon SageMaker Ground Truth Plus",
+            "Data augmentation by using an Amazon Bedrock knowledge base",
+            "Image recognition by using Amazon Rekognition",
+            "Data summarization by using Amazon QuickSight Q"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "A company wants to create a chatbot by using a foundation model (FM) on Amazon Bedrock. The FM needs to access encrypted data that is stored in an Amazon S3 bucket. The data is encrypted with Amazon S3 managed keys (SSE-S3). The FM encounters a failure when attempting to access the S3 bucket data. Which solution will meet these requirements?",
+        "options": [
+            "Ensure that the role that Amazon Bedrock assumes has permission to decrypt data with the correct encryption key",
+            "Set the access permissions for the S3 buckets to allow public access to enable access over the internet",
+            "Use prompt engineering techniques to tell the model to look for information in Amazon S3",
+            "Ensure that the S3 data does not contain sensitive information"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "A company wants to use language models to create an application for inference on edge devices. The inference must have the lowest latency possible. Which solution will meet these requirements?",
+        "options": [
+            "Deploy optimized small language models (SLMs) on edge devices",
+            "Deploy optimized large language models (LLMs) on edge devices",
+            "Incorporate a centralized small language model (SLM) API for asynchronous communication with edge devices",
+            "Incorporate a centralized large language model (LLM) API for asynchronous communication with edge devices"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "A company wants to build an ML model by using Amazon SageMaker. The company needs to share and manage variables for model development across multiple teams. Which SageMaker feature meets these requirements?",
+        "options": [
+            "Amazon SageMaker Feature Store",
+            "Amazon SageMaker Data Wrangler",
+            "Amazon SageMaker Clarify",
+            "Amazon SageMaker Model Cards"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "A company wants to use generative AI to increase developer productivity and software development. The company wants to use Amazon Q Developer. What can Amazon Q Developer do to help the company meet these requirements?",
+        "options": [
+            "Create software snippets, reference tracking, and open source license tracking",
+            "Run an application without provisioning or managing servers",
+            "Enable voice commands for coding and providing natural language search",
+            "Convert audio files to text documents by using ML models"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "A financial institution is using Amazon Bedrock to develop an AI application. The application is hosted in a VPC. To meet regulatory compliance standards, the VPC is not allowed access to any internet traffic. Which AWS service or feature will meet these requirements?",
+        "options": [
+            "AWS PrivateLink",
+            "Amazon Macie",
+            "Amazon CloudFront",
+            "Internet gateway"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "A company wants to develop an educational game where users answer questions such as the following: 'A jar contains six red, four green, and three yellow marbles. What is the probability of choosing a green marble from the jar?' Which solution meets these requirements with the LEAST operational overhead?",
+        "options": [
+            "Use supervised learning to create a regression model that will predict probability",
+            "Use reinforcement learning to train a model to return the probability",
+            "Use code that will calculate probability by using simple rules and computations",
+            "Use unsupervised learning to create a model that will estimate probability density"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Which metric measures the runtime efficiency of operating AI models?",
+        "options": [
+            "Customer satisfaction score (CSAT)",
+            "Training time for each epoch",
+            "Average response time",
+            "Number of training instances"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "A company is building a contact center application and wants to gain insights from customer conversations. The company wants to analyze and extract key information from the audio of the customer calls. Which solution meets these requirements?",
+        "options": [
+            "Build a conversational chatbot by using Amazon Lex",
+            "Transcribe call recordings by using Amazon Transcribe",
+            "Extract information from call recordings by using Amazon SageMaker Model Monitor",
+            "Create classification labels by using Amazon Comprehend"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "A company has petabytes of unlabeled customer data to use for an advertisement campaign. The company wants to classify its customers into tiers to advertise and promote the company's products. Which methodology should the company use to meet these requirements?",
+        "options": [
+            "Supervised learning",
+            "Unsupervised learning",
+            "Reinforcement learning",
+            "Reinforcement learning from human feedback (RLHF)"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "An AI practitioner wants to use a foundation model (FM) to design a search application. The search application must handle queries that have text and images. Which type of FM should the AI practitioner use to power the search application?",
+        "options": [
+            "Multi-modal embedding model",
+            "Text embedding model",
+            "Multi-modal generation model",
+            "Image generation model"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "A company uses a foundation model (FM) from Amazon Bedrock for an AI search tool. The company wants to fine-tune the model to be more accurate by using the company's data. Which strategy will successfully fine-tune the model?",
+        "options": [
+            "Provide labeled data with the prompt field and the completion field",
+            "Prepare the training dataset by creating a .txt file that contains multiple lines in .csv format",
+            "Purchase Provisioned Throughput for Amazon Bedrock",
+            "Train the model on journals and textbooks"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "A company wants to use AI to protect its application from threats. The AI solution needs to check if an IP address is from a suspicious source. Which solution meets these requirements?",
+        "options": [
+            "Build a speech recognition system",
+            "Create a natural language processing (NLP) named entity recognition system",
+            "Develop an anomaly detection system",
+            "Create a fraud forecasting system"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Which feature of Amazon OpenSearch Service gives companies the ability to build vector database applications?",
+        "options": [
+            "Integration with Amazon S3 for object storage",
+            "Support for geospatial indexing and queries",
+            "Scalable index management and nearest neighbor search capability",
+            "Ability to perform real-time analysis on streaming data"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Which option is a use case for generative AI models?",
+        "options": [
+            "Improving network security by using intrusion detection systems",
+            "Creating photorealistic images from text descriptions for digital marketing",
+            "Enhancing database performance by using optimized indexing",
+            "Analyzing financial data to forecast stock market trends"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "A company wants to make a chatbot to help customers. The chatbot will help solve technical problems without human intervention. The company chose a foundation model (FM) for the chatbot. The chatbot needs to produce responses that adhere to company tone. Which solution meets these requirements?",
+        "options": [
+            "Set a low limit on the number of tokens the FM can produce",
+            "Use batch inferencing to process detailed responses",
+            "Experiment and refine the prompt until the FM produces the desired responses",
+            "Define a higher number for the temperature parameter"
+        ],
+        "answer": 2
+    },
+{
+        "question": "A company wants to use a large language model (LLM) on Amazon Bedrock for sentiment analysis. The company wants to classify the sentiment of text passages as positive or negative. Which prompt engineering strategy meets these requirements?",
+        "options": [
+            "Provide examples of text passages with corresponding positive or negative labels in the prompt followed by the new text passage to be classified",
+            "Provide a detailed explanation of sentiment analysis and how LLMs work in the prompt",
+            "Provide the new text passage to be classified without any additional context or examples",
+            "Provide the new text passage with a few examples of unrelated tasks, such as text summarization or question answering"
+        ],
+        "answer": 0
+    },
+{
+        "question": "A security company is using Amazon Bedrock to run foundation models (FMs). The company wants to ensure that only authorized users invoke the models. The company needs to identify any unauthorized access attempts to set appropriate AWS Identity and Access Management (IAM) policies and roles for future iterations of the FMs. Which AWS service should the company use to identify unauthorized users that are trying to access Amazon Bedrock?",
+        "options": [
+            "AWS Audit Manager",
+            "AWS CloudTrail",
+            "Amazon Fraud Detector",
+            "AWS Trusted Advisor"
+        ],
+        "answer": 1
+    },
+{
+        "question": "A company has developed an ML model for image classification. The company wants to deploy the model to production so that a web application can use the model. The company needs to implement a solution to host the model and serve predictions without managing any of the underlying infrastructure. Which solution will meet these requirements?",
+        "options": [
+            "Use Amazon SageMaker Serverless Inference to deploy the model",
+            "Use Amazon CloudFront to deploy the model",
+            "Use Amazon API Gateway to host the model and serve predictions",
+            "Use AWS Batch to host the model and serve predictions"
+        ],
+        "answer": 0
+    },
+{
+        "question": "An AI company periodically evaluates its systems and processes with the help of independent software vendors (ISVs). The company needs to receive email message notifications when an ISV's compliance reports become available. Which AWS service can the company use to meet this requirement?",
+        "options": [
+            "AWS Audit Manager",
+            "AWS Artifact",
+            "AWS Trusted Advisor",
+            "AWS Data Exchange"
+        ],
+        "answer": 1
+    },
+{
+        "question": "An AI practitioner has a database of animal photos. The AI practitioner wants to automatically identify and categorize the animals in the photos without manual human effort. Which strategy meets these requirements?",
+        "options": [
+            "Object detection",
+            "Anomaly detection",
+            "Named entity recognition",
+            "Inpainting"
+        ],
+        "answer": 0
+    },
+{
+        "question": "A company wants to create an application by using Amazon Bedrock. The company has a limited budget and prefers flexibility without long-term commitment. Which Amazon Bedrock pricing model meets these requirements?",
+        "options": [
+            "On-Demand",
+            "Model customization",
+            "Provisioned Throughput",
+            "Spot Instance"
+        ],
+        "answer": 0
+    },
+{
+        "question": "Which AWS service or feature can help an AI development team quickly deploy and consume a foundational model (FM) within the team's VPC?",
+        "options": [
+            "Amazon Personalize",
+            "Amazon SageMaker JumpStart",
+            "PartyRock, an Amazon Bedrock Playground",
+            "Amazon SageMaker endpoints"
+        ],
+        "answer": 1
+    },
+{
+        "question": "How can companies use large language models (LLMs) securely on Amazon Bedrock?",
+        "options": [
+            "Design client or specific prompts",
+            "Configure AWS Identity and Access Management (IAM) roles and policies by using least privilege access",
+            "Enable Amazon Bedrock automatic model evaluation jobs",
+            "Use Amazon CloudWatch Logs to make models explainable and to monitor for bias"
+        ],
+        "answer": 1
+    },
+{
+        "question": "A company has terabytes of data in a database that the company can use for business analytics. The company wants to use minimal experience technology. The company wants to build an AI-based application that can build a SQL query from input text that employees provide. The employees want the technology to have minimal latency. Which solution meets these requirements?",
+        "options": [
+            "Generative pretrained transformers (GPT)",
+            "Residual neural network",
+            "Support vector machine",
+            "Warnet"
+        ],
+        "answer": 0
+    },
+{
+        "question": "An AI practitioner is building a model to generate images of humans in various professions. The AI practitioner discovers that the input data is biased and that specific attributes affect the image generation and create bias in the model. Which technique will solve the problem?",
+        "options": [
+            "Data augmentation for imbalanced classes",
+            "Model monitoring for class distribution",
+            "Retrieval Augmented Generation (RAG)",
+            "Watermark detection for images"
+        ],
+        "answer": 0
+    },
+{
+        "question": "A company wants to deploy a conversational chatbot to answer customer questions. The chatbot is based on a fine-tuned Amazon SageMaker JumpStart model. The application must comply with multiple regulatory compliance frameworks. Which application capability can the company show compliance for? (Choose two.)",
+        "options": [
+            "Auto-scaling inference endpoints",
+            "Threat detection",
+            "Data protection",
+            "Cost optimization",
+            "Loosely coupled microservices"
+        ],
+        "answer": [2, 3]
+    },
+{
+        "question": "A company is training a foundation model (FM). The company wants to increase the accuracy of the model up to a specific acceptable level. Which solution will meet these requirements?",
+        "options": [
+            "Decrease the batch size",
+            "Increase the epochs",
+            "Decrease the epochs",
+            "Increase the temperature parameter"
+        ],
+        "answer": 1
+    },
+{
+        "question": "A company is using an Amazon Bedrock base model to summarize documents for an internal use case. The company trained a custom model to improve the summarization quality. Which action must the company take to use the custom model through Amazon Bedrock?",
+        "options": [
+            "Purchase Provisioned Throughput for the custom model",
+            "Deploy the custom model to an Amazon SageMaker endpoint",
+            "Register the model with the Amazon SageMaker Model Registry",
+            "Grant access to the custom model in Amazon Bedrock"
+        ],
+        "answer": 3
+    },
+{
+        "question": "A company needs to choose a model from Amazon Bedrock to use internally. The company must identify a model that generates responses in a style that the company’s employees prefer. What should the company do to meet these requirements?",
+        "options": [
+            "Evaluate the models by using built-in prompt datasets",
+            "Evaluate the models by using a human workforce and custom prompt datasets",
+            "Use public model leaderboards to identify the model",
+            "Use the invocationLatency runtime metrics in Amazon CloudWatch when trying models"
+        ],
+        "answer": 1
+    },
+{
+        "question": "A company is developing an application that uses multiple AWS services. The application needs to use temporary, limited-privilege credentials for authentication with other AWS APIs. Which AWS service or feature should the company use to meet these authentication requirements?",
+        "options": [
+            "Amazon API Gateway",
+            "IAM users",
+            "AWS Security Token Service (AWS STS)",
+            "IAM instance profiles"
+        ],
+        "answer": 2
+    },
+{
+        "question": "A company needs to build its own large language model (LLM) based on only the company’s private data. The company is concerned about the environmental effect of the training process. Which Amazon EC2 instance type has the LEAST environmental effect when training LLMs?",
+        "options": [
+            "Amazon EC2 G series",
+            "Amazon EC2 P series",
+            "Amazon EC2 Inf series",
+            "Amazon EC2 Trn series"
+        ],
+        "answer": 3
+    },
+{
+        "question": "Which AWS service is always provided at no charge?",
+        "options": [
+            "Amazon S3",
+            "AWS Identity and Access Management (IAM)",
+            "Elastic Load Balancers",
+            "AWS WAF"
+        ],
+        "answer": 1
+    },
+{
+        "question": "A company is building a customer service chatbot. The company wants the chatbot to improve its responses by learning from past interactions and online resources. Which AI learning strategy provides the chatbot with this self-improvement capability?",
+        "options": [
+            "Supervised learning with a manually curated dataset of good customer responses",
+            "Reinforcement learning with rewards for positive customer feedback",
+            "Unsupervised learning to find clusters of similar customer inquiries",
+            "Supervised learning with a continuously updated FAQ database"
+        ],
+        "answer": 1
+    },
+{
+        "question": "A company is preparing to launch a new web store that is expected to receive high traffic for an upcoming event. The web store runs only on AWS, and the company has an AWS Enterprise Support plan. Which AWS resource will provide guidance about how the company can scale its architecture and operational support during the event?",
+        "options": [
+            "The AWS Abuse team",
+            "The designated technical account manager (TAM)",
+            "AWS infrastructure event management",
+            "AWS Professional Services"
+        ],
+        "answer": 2
+    },
+{
+        "question": "A company has built a chatbot that can respond to natural language questions with images. The company wants to ensure that the chatbot does not return inappropriate or unwanted images. Which solution will meet these requirements?",
+        "options": [
+            "Implement moderation APIs",
+            "Retain the model with a general public dataset",
+            "Perform model validation",
+            "Automate user feedback integration"
+        ],
+        "answer": 0
+    },
     {
         "question": "Which term describes the numerical representations of real-world objects and concepts that AI and natural language processing (NLP) models use to improve understanding of textual information?",
         "options": [
