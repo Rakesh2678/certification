@@ -772,6 +772,95 @@ const questions = [
             "Could you describe how long you've been feeling this way and if there are any specific triggers?"
         ],
         "answer": 2
-    }
+    },{
+    "question": "A Generative AI Engineer is building a system which will answer questions on latest stock news articles. Which will NOT help with ensuring the outputs are relevant financial news?",
+    "options": [
+      "Implement a comprehensive guardrail framework that includes policies for content filters tailored to the finance sector.",
+      "Increase the compute to improve processing speed of questions to allow greater relevancy analysis",
+      "Implement a profanity filter to screen out offensive language.",
+      "Incorporate manual reviews to correct any problematic outputs prior to sending to the users"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "A Generative AI Engineer has just deployed an LLM application at a manufacturing company that assists with answering customer service inquiries. They need to identify the key enterprise metrics to monitor the application in production. Which is NOT a metric they will implement for their customer service LLM application in production?",
+    "options": [
+      "Massive Multi-task Language Understanding (MMLU) score",
+      "Number of customer inquiries processed per unit of time",
+      "Factual accuracy of the response",
+      "Time taken for LLM to generate a response"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "A Generative AI Engineer has built an LLM-based system that will automatically translate user text between two languages. They now want to benchmark multiple LLM's on this task and pick the best one. They have an evaluation set with known high quality translation examples. They want to evaluate each LLM using the evaluation set with a performance metric. Which metric should they choose for this evaluation?",
+    "options": [
+      "BLEU metric",
+      "NDOG metric",
+      "ROUGE metric",
+      "RECALL metric"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "A Generative AI Engineer is designing an LLM-powered live sports commentary platform. The platform provides real-time updates and LLM-generated analyses for any users who would like to have live summaries, rather than reading a series of potentially outdated news articles. Which tool below will the platform access to real-time data for generating game analyses based on the latest game scores?",
+    "options": [
+      "DatabricksIQ",
+      "Foundation Model APIs",
+      "Feature Serving",
+      "AutoML"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "A Generative AI Engineer is ready to deploy an LLM application written using Foundation Model APIs. They want to follow security best practices for production scenarios. Which authentication method should they choose?",
+    "options": [
+      "Use OAuth machine-to-machine authentication",
+      "Use an access token belonging to service principals",
+      "Use an access token belonging to any workspace user",
+      "Use a frequently rotated access token belonging to either a workspace user or a service principal"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "A Generative AI Engineer is tasked with improving the RAG quality by addressing its inflammatory outputs. Which action will be most effective in mitigating the problem of offensive text outputs?",
+    "options": [
+      "Increase the frequency of upstream data updates",
+      "Inform the user of the expected RAG behavior",
+      "Restrict access to the data sources to a limited number of users",
+      "Curate upstream data properly that includes manual review before it is fed into the RAG system"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "A Generative AI Engineer is developing a patient-facing healthcare-focused chatbot. If the patient's question is not a medical emergency, the chatbot should solicit more information from the patient to pass to the doctor's office and suggest a few relevant pre-approved medical articles for reading. If the patient's question is urgent, direct the patient to calling their local emergency services. Given the following user input: 'I have been experiencing severe headaches and dizziness for the past two days.' Which response is most appropriate for the chatbot to generate?",
+    "options": [
+      "Here are a few relevant articles for your browsing. Let me know if you have questions after reading them.",
+      "Please call your local emergency services.",
+      "Headaches can be tough. Hope you feel better soon!",
+      "Please provide your age, recent activities, and any other symptoms you have noticed along with your headaches and dizziness."
+    ],
+    "answer": 3
+  },
+  {
+    "question": "A Generative AI Engineer is building a RAG application that answers questions about technology-related news articles. The source documents may contain a significant amount of irrelevant content, such as advertisements, sports news, or entertainment news. Which approach is NOT advisable for building a RAG application focused on answering technology-only questions?",
+    "options": [
+      "Include in the system prompt that the application is not supposed to answer any questions unrelated to technology.",
+      "Filter out irrelevant news articles in the retrieval process.",
+      "Keep all news articles because the RAG application needs to understand non-technological content to avoid answering questions about them.",
+      "Filter out irrelevant news in the upstream document database."
+    ],
+    "answer": 2
+  },
+  {
+    "question": "A Generative AI Engineer is working with a retail company that wants to enhance its customer experience by automatically handling common customer inquiries. They are working on an LLM-powered AI solution that should improve response times while maintaining a personalized interaction. They want to define the appropriate input and LLM task to do this. Which input/output pair will do this?",
+    "options": [
+      "Input: Customer service chat logs; Output: Group the chat logs by user, followed by summarizing each user's interactions, then respond",
+      "Input: Customer service chat logs; Output: Find the answers to similar questions and respond with a summary",
+      "Input: Customer reviews; Output: Classify review sentiment",
+      "Input: Customer reviews; Output: Group the reviews by user and aggregate per-user average rating, then respond"
+    ],
+    "answer": 1
+  }
 ]
 
